@@ -67,6 +67,6 @@ jobs:
         uses: actions/create-release@v1
         id: create_release
         with:
-          release_name: latest
+          release_name: documentation
         env:
           GITHUB_TOKEN: ${{ github.token }}
