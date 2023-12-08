@@ -1,0 +1,6 @@
+[book]
+authors = ["jakub.svoboda"]
+language = "de"
+multilingual = false
+src = "src"
+title = "Dokumentation"
