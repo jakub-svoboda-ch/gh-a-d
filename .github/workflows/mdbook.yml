@@ -46,12 +46,8 @@ jobs:
           pwd
           tree .
           mdbook build ./docs/
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: ./docs/book
-      - name: Publish as release
-        uses: actions/upload-artifact@v2
+      - name: Publish Artifact with a name
+        uses: actions/upload-artifact@v3
         with:
           name: documentation
           path: ./docs/book
@@ -67,3 +63,10 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
+      - name: Publish a release
+        uses: actions/create-release@v1
+        id: create_release
+        with:
+          release_name: latest
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
