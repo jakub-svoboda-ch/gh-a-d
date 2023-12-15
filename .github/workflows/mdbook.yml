@@ -47,9 +47,9 @@ jobs:
           tree .
           mdbook build ./docs/
       - name: Publish Artifact with a name
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: documentation
+          name: documentation-latest
           path: ./docs/book
 
   # Deployment job
