@@ -64,7 +64,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v3
         with:
-          artifact_name: documentation
+          artifact_name: documentation-latest
       - name: Publish a release
         uses: actions/create-release@v1
         id: create_release
